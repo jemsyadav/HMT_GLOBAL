@@ -1,12 +1,17 @@
-import React from 'react'
+import React,{useEffect} from "react";
 import '../../src/Styles/WhyWeChooose.css'
 import imagewhyiam from '../Images/whyimg.svg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhyWeChoose = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div>
 
-    <div className="whychooseus">
+    <div data-aos="fade-up" className="whychooseus ">
 
       <div className="container">
         <div className="row">
@@ -21,8 +26,14 @@ const WhyWeChoose = () => {
             <div className="col-md--1">
 
             </div>
+
+            
             <div className="col-md-6">
+            
+            <div data-aos="flip-right">
             <img src={imagewhyiam} alt="" width={'100%'} />
+            </div>
+
             </div>
 
             <div className="col-md-5">

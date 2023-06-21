@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import '../../src/Styles/Home.css'
 import Slider from '../Components/Slider'
 import Studies from '../Components/Studies'
@@ -21,8 +21,14 @@ import SoftwareSolution from '../Components/SoftwareSolution'
 import Footer1 from '../Components/Footer1'
 import Counter from '../Components/Counter'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
 const [text,setText]=useState(false)
 const handleTextOpen=()=>{
   setText(true)
@@ -38,7 +44,7 @@ const handleTextClose=()=>{
     
    <Navbar1/>
   
-      <div className=" Home_Background container-fluid">
+      <div  className=" Home_Background container-fluid">
       <div className="container">
         <div className="col-md-2">
 
